@@ -23,38 +23,6 @@
     <p>【出力】</p>
     <div id="fizzbuzz-result"></div>
 
-    <script language="javascript" type="text/javascript">
-        function showResult() {
-            const fizz_num = Number(document.getElementById("fizz-num").value);
-            const buzz_num = Number(document.getElementById("buzz-num").value);
-
-            const div = document.getElementById("fizzbuzz-result");
-            div.innerHTML = '';
-
-            if ( !(Number.isInteger(fizz_num)) || !(Number.isInteger(buzz_num)) || !fizz_num || !buzz_num) {
-                let p = document.createElement("p");
-                p.innerText = "整数値を入力してください";
-                div.appendChild(p);
-                return ;
-            }
-
-            for (let num = 1; num < 100; num++) {
-
-                if (num % fizz_num === 0 && num % buzz_num === 0) {
-                    let p = document.createElement("p");
-                    p.innerText = "FizzBuzz " + num;
-                    div.appendChild(p);
-                } else if (num % fizz_num === 0) {
-                    let p = document.createElement("p");
-                    p.innerText = "Fizz " + num;
-                    div.appendChild(p);
-                } else if (num % buzz_num === 0) {
-                    let p = document.createElement("p");
-                    p.innerText = "Buzz " + num;
-                    div.appendChild(p);
-                }
-            }
-        }
-    </script>    
+    <script language="javascript" src="fizzbuzz.js"></script>    
 </body>
 </html>
